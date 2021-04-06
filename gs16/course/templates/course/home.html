@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Course</title>
+</head>
+<body>
+    <h1>Course</h1>
+    <hr>
+    <form action="" method="post"> {% csrf_token %}
+    <input type="button" value="Submit" onclick="ale()">
+    </form> 
+    <img src="{% static 'course/images/img1.jpg' %}" alt="" srcset="">
+</body>
+<script src="{% static 'course/js/jsfile.js' %}"></script>
+</html>

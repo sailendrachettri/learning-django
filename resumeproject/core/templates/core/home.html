@@ -1,0 +1,38 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<div class=" mt-5">
+    <div class="text-center">
+        <img src="{% static 'core/images/elon.png' %}" alt="Elon profile photo" class="img-thumbnail" width="250px"
+            height="150px">
+    </div>
+
+    <div class="mt-5 text-white mx-5 text-justify">
+        <h1 class="font-weight-bold st-font">Hello,</h1>
+        <div class="px-4" style="line-height: 2rem;">
+            <p style="text-indent:100px;">
+                I am <b class="text-warning">Elon Reeve Musk </b> FRS is a business magnate, industrial designer, and
+                engineer. I also the <b class="text-warning">founder, CEO </b> & chief designer of SpaceX early
+                investor, CEO, and product architect of Tesla, Inc.
+                and co-founder and initial co-chairman of OpenAI.
+            </p>
+            <p> Musk was born to a Canadian mother and South African father and raised in Pretoria, South Africa.I moved to California in 1995 to attend Stanford University but decided instead
+                to
+                pursue a business career, co-founding the web software company Zip2 with his brother Kimbal.</p>
+
+            <p>In 2002, Musk founded SpaceX, an aerospace manufacturer and space transport services company, of which he
+                is
+                CEO, CTO, and lead designer. In 2006,Ihelped create SolarCity,
+                a
+                solar energy services company and current Tesla subsidiary. In 2015,I co-founded OpenAI, a nonprofit
+                research company that promotes friendly artificial intelligence.
+            </p>
+        </div>
+    </div>
+    <div class="text-center">
+        <a href="{% url 'contact' %}" class="btn btn-outline-warning my-3 mx-5">Hire me</a>
+        <a href="{% url 'contact' %}" class="btn btn-outline-info my-3">Contact</a>
+    </div>
+</div>
+{% endblock content %}
+

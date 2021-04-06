@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: aqua;
+        }
+    </style>
+    <title>Django</title>
+</head>
+
+<body>
+    <!-- <h1>Name: {{nm}} Duration: {{du}} Seats: {{st}}</h1> -->
+    <!-- <h3> {{nm|capfirst}} </h3> -->
+    <!-- <h3> {{nm|default:"Nothing"}} </h3> -->
+    <!-- <h3> {{nm|length}} </h3> -->
+    <!-- <h3> {{nm|lower}} </h3> -->
+    <!-- <h3> {{nm|upper}} </h3> -->
+    <!-- <h3> {{nm|slice:'2'}} </h3> -->
+    <!-- <h3> {{nm|truncatechars:7}} </h3> -->
+    <!-- <h3> {{nm|truncatewords:2}} </h3> -->
+    <!-- Date time -->
+    <!-- <h2> {{dt| date:"D d M Y"}}</h2> -->
+    <!-- <h2> {{dt|date:"SHORT_DATE_FORMAT"}}</h2> -->
+    <!-- <h2> {{dt| time:"H : i"}}</h2> -->
+    <!-- <h2> {{dt|time:"TIME_FORMAT"}}</h2> -->
+
+    <!-- Float Format -->
+    <!-- <h1>{{p1|floatformat}}</h1>
+   <h1>{{p2|floatformat}}</h1>
+   <h1>{{p3|floatformat}}</h1> -->
+
+    <!-- IF ELSE TAG -->
+    <!-- {% if nm %}
+    <h3>Hello {{nm}}</h3>
+    {% endif %} -->
+    <!-- <H1>AND</H1>
+    {% if nm and st %}
+    <h2>Hello {{nm}} {{st}}</h2>
+    {% endif %}
+
+    <h1>OR</h1>
+    {% if nm or st %}
+    <h2>Hello {{nm}} {{st}}</h2>
+    {% endif %}
+
+    <h1>NOT</h1>
+    {% if not st %}
+    <h2>Hello {{nm}} {{st}}</h2>
+    {% endif %}
+
+    <h1>==</h1>
+    {% if nm == 'Django' %}
+    <h2>Hello {{nm}} {{st}}</h2>
+    {% endif %}
+
+    <h1>== and</h1>
+    {% if nm == 'Django' and st == 5 %}
+    <h2>Hello {{nm}} {{st}}</h2>
+    {% endif %}
+
+    <h1>filter |</h1>
+    {% if nm|length >= 4 %}
+    <h2>Hello {{nm}} {{st}}</h2>
+    {% endif %}
+
+    <h1>IF ELSE</h1>
+    {% if nm %}
+    <h3>Hello {{nm}}</h3>
+    {% else %}
+    <h3>NO hello Hello</h3>
+    {% endif %} -->
+
+    <!-- <ul>
+    {% for name in names %}
+   <li> {{name}}</li>
+    {% endfor %}
+</ul> -->
+    <!-- 
+<h2>Reversed</h2>
+    <ul>
+    {% for name in names reversed %}
+   <li> {{name}}</li>
+   {% empty %}
+   <h2>Nothing</h2>
+    {% endfor %} -->
+
+    <h2>For loop counter </h2>
+
+    {% for name in names reversed %}
+  <h2>  {{forloop.revcounter}} {{name}} </h2><br>
+    {% endfor %} 
+
+
+    <!-- <h3>{{student}}</h3> <br>
+    <h3>{{student.stu1}}</h3>
+    <h3>{{student.stu2}}</h3>
+    <h3>{{student.stu3}}</h3>
+    <h3>{{student.stu4}}</h3>
+    <h3>{{student.stu1.name}}</h3>
+    <h3>{{student.stu1.roll}}</h3>
+    <h3>{{student.stu2.name}}</h3>
+    <h3>{{student.stu2.roll}}</h3>
+    <h3>{{student.stu3.name}}</h3>
+    <h3>{{student.stu3.roll}}</h3>
+    <h3>{{student.stu4.name}}</h3>
+    <h3>{{student.stu4.roll}}</h3> -->
+
+    {% for key, value in data.items %}
+    {{key}}  = {{value}} <br>
+    <!-- {{key}} <br> -->
+    {% for k, v in value.items %}
+   {{forloop.parentloop.counter}} {{k}} = {{v}} <br>
+    {% endfor %}
+    {% endfor %}
+
+</body>
+
+</html>
