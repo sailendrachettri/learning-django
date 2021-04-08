@@ -6,4 +6,6 @@ def my_middleware(get_response):
         response = get_response(request)
         print('This is after view')
         return response
-    return my_function
+    return my_function 
+
+    
