@@ -8,10 +8,16 @@
 </head>
 <body>
     <h1>Student Home</h1>
-    {% for student in student_list %}
+    {% for student in students %}
         {{student.name}} 
         {{student.roll}} 
         {{student.course}} <br>
+    {% endfor %} <hr>
+
+    {% for fresher in freshers %}
+        {{fresher.name}} 
+        {{fresher.roll}} 
+        {{fresher.course}} <br>
     {% endfor %}
     
 </body>
