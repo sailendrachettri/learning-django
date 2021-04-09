@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+    <style>
+    table, tr, th, td{
+        border: 1px solid;
+    }
+    </style>
+</head>
+<body>
+    <table>
+        <h3>Original ExamCenter Information</h3>
+        <th>ID</th>
+        <th>Exam Center Name</th>
+        <th>Exam Center city</th>
+        {% for center in centers %}
+        <tr>
+            <td>{{center.id}}</td>
+            <td>{{center.cname}}</td>
+            <td>{{center.city}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <table>
+        <h3> Proxy MyExamCenter Information</h3>
+        <th>ID</th>
+        <th>Exam Center Name</th>
+        <th>Exam Center City</th>
+        {% for mycenter in mycenters %}
+        <tr>
+            <td>{{mycenter.id}}</td>
+            <td>{{mycenter.cname}}</td>
+            <td>{{mycenter.city}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
